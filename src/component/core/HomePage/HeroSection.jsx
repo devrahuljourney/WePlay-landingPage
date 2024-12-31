@@ -45,16 +45,32 @@ export default function HeroSection() {
           </p>
         </div>
 
-        {/* Right Section: Image */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="relative flex justify-center lg:justify-end items-center">
+        
+
+          {/* Cloud Effect */}
+          <div
+            className="absolute top-0 left-0 w-full h-full pointer-events-none"
+            style={{
+              background: `radial-gradient(circle, rgba(255,20,147,0.4) 0%, rgba(255,20,147,0) 70%)`,
+              filter: 'blur(20px)',
+              zIndex: -1,
+            }}
+          ></div>
+
+          {/* Victor Image */}
           <img
             src={victor}
             alt="Gaming Image"
-            className="w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] object-contain"
+            className="w-[200px] sm:w-[400px] md:w-[500px] lg:w-[500px] xl:w-[800px] object-contain relative"
+            style={{
+              animation: "float 5s ease-in-out infinite",
+            }}
           />
         </div>
-
       </div>
+
+      
     </div>
   );
 }
